@@ -1,0 +1,39 @@
+{
+  "name": "sandstorm/imagorstudio",
+  "description": "Imagor Studio integration for Neos CMS",
+  "type": "neos-package",
+  "require": {
+    "php": "^8.2",
+    "neos/neos": "~9.0",
+    "neos/neos-ui": "~9.0",
+    "firebase/php-jwt": "^v6.11.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "suggest": {
+    "phpstan/phpstan": "For running code quality checks"
+  },
+  "scripts": {
+    "test": "../../../bin/phpunit --enforce-time-limit --bootstrap ../../Libraries/autoload.php --testdox Tests",
+    "test:ci": "phpunit --enforce-time-limit --bootstrap vendor/autoload.php --testdox Tests",
+    "codestyle": "phpstan analyse --autoload-file ../../Libraries/autoload.php",
+    "codestyle:ci": "phpstan analyse"
+  },
+  "license": "GPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "Sandstorm\\ImagorStudio\\": "Classes"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sandstorm\\ImagorStudio\\Tests\\": "Tests"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "neos/composer-plugin": true
+    }
+  }
+}

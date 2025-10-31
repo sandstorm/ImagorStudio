@@ -1,0 +1,15 @@
+Sandstorm:
+  ImagorStudio:
+    jwtSecret: 'your-jwt-secret-change-in-production'
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'Sandstorm.ImagorStudio':
+          imagorJwt: ${Sandstorm.ImagorStudio.Internal.generateJwt()}
+      configurationDefaultEelContext:
+        Sandstorm.ImagorStudio.Internal: Sandstorm\ImagorStudio\Internal\ImagorStudioHelper
+      resources:
+        javascript:
+          'Sandstorm.ImagorStudio/ImagorStudioIntegration':
+            resource: resource://Sandstorm.ImagorStudio/Public/ImagorStudioIntegration/Plugin.js

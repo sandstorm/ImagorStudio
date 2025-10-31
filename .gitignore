@@ -1,0 +1,31 @@
+#
+# System files
+#
+.DS_store
+
+#
+# Application & development dependencies.
+#
+node_modules
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+yarn-error.log
+/.parcel-cache
+.cache
+
+#
+# Compiled assets.
+#
+/packages/dev-server/dist
+
+#
+# editors / IDEs
+#
+.vscode/
+.idea/
+/screenshots
