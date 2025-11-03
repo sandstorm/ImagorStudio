@@ -31,7 +31,7 @@ export default class ImagorImageEditor extends PureComponent {
 			const {sourceImage, cropConfiguration, onComplete, imagorJwt} = this.props;
 
 			return <iframe
-				src={`http://localhost:8000/?token=${imagorJwt}&path=${sourceImage.image.imagorStudioImagepath}`}
+				src={`http://localhost:5173/?token=${imagorJwt}&path=${sourceImage.image.imagorStudioImagepath}&theme=dark`}
 				width="100%"
 				height="100%"
 				frameBorder="0"
